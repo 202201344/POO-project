@@ -1,18 +1,23 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class Package{
-    private List<Bag> bagList;
-/*
- * box list 
- * cardboardbox list
- * pallet list
- */
-    public Package(){
-        bagList = new ArrayList<>();
+public class Package {
+    private String type;
+    private String code;
+    
+    public Package(String type, String code) {
+        this.type = type;
+        this.code = code;
     }
     
-    public List<Bag> getBags(){
-        return bagList;
+    public String getType(){
+        return type;
+    }
+
+    public String getCode(){
+        return code;
+    }
+
+     
+    @Override
+    public String toString() {
+        return "Packaging type: " + type + ", Code: " + code;
     }
 }
