@@ -20,9 +20,9 @@ public class Warehouse {
     }
     
     public void addVehicle(Vehicle vehicle) {
-        int row = vehicle.getRow();
-        int column = vehicle.getColumn();
-        vehicles[row][column] = vehicle;
+        //int row = vehicle.getRow();
+        //int column = vehicle.getColumn();
+        //vehicles[row][column] = vehicle;
     }
     
     public Vehicle getVehicle(int row, int column) {

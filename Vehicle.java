@@ -1,20 +1,14 @@
 
-public class Vehicle {
+public abstract class Vehicle implements Movable{
     private String type;
-    private int row;
-    private int column;
+    private Position position;
     
-    public Vehicle(String type, int row, int column) {
+    public Vehicle(String type, Position position) {
         this.type = type;
-        this.row = row;
-        this.column = column;
+        this.position = position;
     }
     
-    public void moveTo(Position position) {
-        // Update the row and column of the vehicle to the new position
-        this.row = position.getRow();
-        this.column = position.getColumn();
-    }
+    // lets say that the warehouse is a size of 10x10
     
     public void loadProduct(Products product) {
         // Logic to load the product onto the vehicle
@@ -36,19 +30,51 @@ public class Vehicle {
         this.type = type;
     }
     
-    public int getRow() {
-        return row;
+    public Position getPosition(){
+        return position;
     }
-    
-    public void setRow(int row) {
-        this.row = row;
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
-    
-    public int getColumn() {
-        return column;
+
+    @Override
+
+    public void moveUp() {
+        int currentRow = position.getRow();
+        if (currentRow > 0) {
+            position = new Position(currentRow - 1, position.getColumn());
+        }
     }
-    
-    public void setColumn(int column) {
-        this.column = column;
+
+    @Override
+
+    public void moveDown() {
+        // Adjust the boundary according to the warehouse size
+        int maxRows = 10;/* Maximum number of rows in the warehouse */;
+        int currentRow = position.getRow();
+        if (currentRow < maxRows - 1) {
+            position = new Position(currentRow + 1, position.getColumn());
+        }
     }
+
+    @Override
+    public void moveLeft() {
+        int currentColumn = position.getColumn();
+        if (currentColumn > 0) {
+            position = new Position(position.getRow(), currentColumn - 1);
+        }
+    }
+
+    @Override
+    public void moveRight() {
+        // Adjust the boundary according to the warehouse size
+        int maxColumns = 10;/* Maximum number of columns in the warehouse */;
+        int currentColumn = position.getColumn();
+        if (currentColumn < maxColumns - 1) {
+            position = new Position(position.getRow(), currentColumn + 1);
+        }
+    }
+
+
 }
