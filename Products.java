@@ -2,9 +2,9 @@ public class Products {
     private String name;
     private String identifier;
     private double weight;
-    private String type;
+    private ProductsType type;
     
-    public Products(String name, String identifier, double weight, String type) {
+    public Products(String name, String identifier, double weight, ProductsType type) {
         this.name = name;
         this.identifier = identifier;
         this.weight = weight;
@@ -23,7 +23,7 @@ public class Products {
         return weight;
     }
 
-    public String getType(){
+    public ProductsType getType(){
         return type;
     }
 
@@ -37,10 +37,6 @@ public class Products {
 
     public void setWeight(double index){
         weight = index;
-    }
-
-    public void setType(String index){
-        type = index;
     }
 
     public void packageProduct(Package packaging) {

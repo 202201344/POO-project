@@ -1,13 +1,13 @@
 public class Package {
-    private String type;
+    private PackagingType type;
     private String code;
-    
-    public Package(String type, String code) {
+  //  private ProductsType productsType;
+    public Package(PackagingType type, String code) {
         this.type = type;
         this.code = code;
     }
     
-    public String getType(){
+    public PackagingType getType(){
         return type;
     }
 
@@ -15,6 +15,11 @@ public class Package {
         return code;
     }
 
+   // public PackagingType isType(PackagingType packagingType, ProductsType productsType) {
+     //   if(ProductsType.CLOTHING == productsType)
+      //  return packagingType;
+//
+  //  }    
      
     @Override
     public String toString() {
