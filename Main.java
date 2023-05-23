@@ -6,13 +6,16 @@ public class Main {
         MapReader mapReader = new MapReader("warehouse_model.txt");
         int rows = mapReader.getRows();
         int columns = mapReader.getColumns();
+       // PickupLocation pickupLocation;
 
         Package package1 = new Package(PackagingType.BOX, "ABC123");
         Package package2 = new Package(PackagingType.CARDBOARD_BOX, "DEF456");
 
-        List<Package> packages = new ArrayList<>();
-        packages.add(package1);
-        packages.add(package2);
+        //List<Package> packages = new ArrayList<>();
+        //packages.add(package1);
+        //packages.add(package2);
+
+        //addProductToQueue(package1);
         
         // Print the map
         for (int i = 0; i < rows; i++) {

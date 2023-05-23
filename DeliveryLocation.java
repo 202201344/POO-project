@@ -1,17 +1,11 @@
 public class DeliveryLocation {
-    private int positionX;
-    private int positionY;
+    private Position position;
     
-    public DeliveryLocation(int positionX, int positionY) {
-        this.positionX = positionX;
-        this.positionY = positionY;
+    public DeliveryLocation(Position position) {
+        this.position = position;
     }
-    public int getPositionX(){
-        return positionX;
-    }
-
-    public int getPositionY(){
-        return positionY;
+    public Position getPosition(){
+        return position;
     }
 }
 

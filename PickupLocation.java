@@ -3,17 +3,17 @@ import java.util.List;
 
 public class PickupLocation {
     Position position;
-    private List<Products> products;
+    List<Package> packages;
 
     public PickupLocation(Position position) {
         this.position = position;
-        products = new ArrayList<>();
+        packages = new ArrayList<>();
     }
     
-    public void pickUpProduct(Products product) {
-        products.add(product);
+    public void addProductToQueue(Package packages){
+        this.packages.add(packages);
     }
-
+    
     public Position getPosition() {
         return position;
     }

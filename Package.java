@@ -15,11 +15,11 @@ public class Package {
         return code;
     }
 
-   // public PackagingType isType(PackagingType packagingType, ProductsType productsType) {
-     //   if(ProductsType.CLOTHING == productsType)
+      // public PackagingType isType(PackagingType packagingType, ProductsType productsType) {
+      //   if(ProductsType.CLOTHING == productsType)
       //  return packagingType;
-//
-  //  }    
+      //
+      //  }    
      
     @Override
     public String toString() {
