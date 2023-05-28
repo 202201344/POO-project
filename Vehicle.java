@@ -10,14 +10,14 @@ public abstract class Vehicle implements Movable{
     
     //the warehouse is a size of 10x10
     
-    public void loadProduct(Products product) {
+    public void loadProduct(Package packages) {
         
-        System.out.println("Loading product: " + product.getName() + " onto the " + type);
+        System.out.println("Loading product: " + packages.getType() + " onto the " + type);
     }
     
-    public void unloadProduct(Products product) {
+    public void unloadProduct(Package packages) {
        
-        System.out.println("Unloading product: " + product.getName() + " from the " + type);
+        System.out.println("Unloading product: " + packages.getType() + " from the " + type);
     }
    
     public String getType() {

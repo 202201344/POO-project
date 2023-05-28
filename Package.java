@@ -1,6 +1,7 @@
 public class Package {
     private PackagingType type;
     private String code;
+    
   //  private ProductsType productsType;
     public Package(PackagingType type, String code) {
         this.type = type;
